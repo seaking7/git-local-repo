@@ -1,0 +1,15 @@
+
+
+eureka:
+  instance:
+    hostname: 3.35.149.173    
+
+my:
+  kafka-server: 13.209.136.250:9092
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
