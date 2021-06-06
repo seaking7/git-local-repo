@@ -1,7 +1,4 @@
 
-eureka:
-  instance:
-    hostname: localhost  # PC hosts 파일 문제
 
 my:
   kafka-server: 13.209.136.250:9092

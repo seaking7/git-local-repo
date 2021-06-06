@@ -1,9 +1,5 @@
 
 
-eureka:
-  instance:
-    hostname: ${HOSTIP}
-
 my:
   kafka-server: 13.209.136.250:9092
 

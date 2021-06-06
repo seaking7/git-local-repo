@@ -1,8 +1,5 @@
 
 
-eureka:
-  instance:
-    hostname: 52.79.182.159    
 
 my:
   kafka-server: 13.209.136.250:9092
