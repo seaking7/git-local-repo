@@ -2,7 +2,7 @@
 
 eureka:
   instance:
-    hostname: 13.125.228.146    
+    hostname: ${HoSTIP}    
 
 my:
   kafka-server: 13.209.136.250:9092
