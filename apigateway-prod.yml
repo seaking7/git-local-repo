@@ -1,7 +1,6 @@
 
 eureka:
   instance:
-    hostname: ${HOSTIP}
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     #    preferIpAddress: true
   client:
