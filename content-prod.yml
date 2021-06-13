@@ -16,7 +16,7 @@ spring:
     show-sql: true
     generate-ddl: true
   datasource:
-    url: jdbc:mariadb://100.51.100.90:3306/mydb
+    url: jdbc:mariadb://100.51.100.90:3306/contentdb
     driver-class-name: org.mariadb.jdbc.Driver
     username: content
     password: rlaxorud
