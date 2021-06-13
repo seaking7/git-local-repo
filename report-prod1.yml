@@ -14,9 +14,9 @@ spring:
     show-sql: true
     generate-ddl: true
   datasource:
-    url: jdbc:mariadb://13.209.136.250:3306/report
+    url: jdbc:mariadb://100.51.101.67:3306/reportdb
     driver-class-name: org.mariadb.jdbc.Driver
-    username: taekyung
+    username: report
     password: rlaxorud
 
 
