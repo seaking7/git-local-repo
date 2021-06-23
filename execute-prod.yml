@@ -54,4 +54,4 @@ management:
 logging:
   level:
     com.uplus: DEBUG
-    com.netflix: INFO # ERROR
+    com.netflix: ERROR # INFO # 
