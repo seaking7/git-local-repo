@@ -52,4 +52,6 @@ management:
         include: "*"
 
 logging:
-  level: INFO
+  level:
+    com.uplus: DEBUG
+    com.netflix: ERROR
