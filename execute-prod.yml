@@ -52,5 +52,4 @@ management:
         include: "*"
 
 logging:
-  level:
-    com.uplus: DEBUG
+  level: INFO
