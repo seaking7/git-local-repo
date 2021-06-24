@@ -35,10 +35,6 @@ eureka:
     serviceUrl:
       defaultZone: http://100.51.0.209:8761/eureka/,http://100.51.1.170:8761/eureka/
 
-logging:
-  level:
-    com.uplus.sdcontent: DEBUG
-
 my:
   kafka-server: 13.209.136.250:9092
 
