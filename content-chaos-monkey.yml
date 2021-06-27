@@ -45,7 +45,7 @@ management:
       enabled: true
     web:
       exposure:
-        include: "*"
+#        include: "*"
         include: health,info,chaosmonkey
 
 
