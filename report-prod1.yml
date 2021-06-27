@@ -39,10 +39,22 @@ eureka:
 
 my:
   kafka-server: 13.209.136.250:9092
-  circuit-fail-rate-threshold: 4    #Circuit Close -> Open
-  circuit-wait-open-state: 5        #Circuit Open -> Half Open
+  circuit-fail-rate-threshold: 4    #Circuit Close -> Open   4% failrate
+  circuit-wait-open-state: 5        #Circuit Open -> Half-Open 5s wait
   
+management.health.circuitbreakers.enabled: true
+management.health.ratelimiters.enabled: true
 
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      registerHealthIndicator: true
+
+
+resilience4j.ratelimiter:
+  configs:
+    default:
+      registerHealthIndicator: true
 
 management:
   endpoints:
