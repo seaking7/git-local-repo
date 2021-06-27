@@ -52,6 +52,14 @@ resilience4j.circuitbreaker:
   instances:
     GetContent:
       baseConfig: default
+      registerHealthIndicator: true
+      slidingWindowSize: 10
+      permittedNumberOfCallsInHalfOpenState: 3
+      slidingWindowType: COUNT_BASED
+      minimumNumberOfCalls: 5
+      waitDurationInOpenState: 10s
+      failureRateThreshold: 5
+      eventConsumerBufferSize: 5      
 
 resilience4j.ratelimiter:
   configs:
