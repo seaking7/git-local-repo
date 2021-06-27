@@ -41,15 +41,17 @@ my:
 
 management:
   endpoints:
+    chaosmonkey:
+      enabled: true
     web:
       exposure:
         include: "*"
-    chaosmonkey:
-      enabled: true
+        include: health,info,chaosmonkey
 
 
 chaos:
   monkey:
+    enabled: true
     watcher:
       componenet: true
       controller: true
