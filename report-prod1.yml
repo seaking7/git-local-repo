@@ -58,7 +58,9 @@ resilience4j.circuitbreaker:
       slidingWindowType: COUNT_BASED
       minimumNumberOfCalls: 5
       waitDurationInOpenState: 10s
-      failureRateThreshold: 5
+      failureRateThreshold: 5        #실패가 5%이상이면 Circuit
+      slowCallRateThreshold: 10      #slow가 10%이상이면 Circuit
+      slowCallDurationThreshold: 2   #2초보다 늦으면 Slow
       eventConsumerBufferSize: 5      
 
 resilience4j.ratelimiter:
