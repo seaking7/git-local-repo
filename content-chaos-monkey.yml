@@ -51,7 +51,7 @@ chaos:
   monkey:
     enabled: true
     watcher:
-      componenet: true
+      component: true
       controller: true
       repository: true
       service: true
