@@ -1,0 +1,51 @@
+server:
+  port: 0
+
+
+spring:
+  application:
+    name: execute-service
+  zipkin:
+    base-url: http://34.64.215.186:9411
+    enabled: true
+  sleuth:
+    sampler:
+      probability: 1.0
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    generate-ddl: true
+  datasource:
+    url: jdbc:mariadb://100.51.0.2:3306/execute
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: execute
+    password: rlaxorud
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 1 # 디스커버리한테 1초마다 하트비트 전송
+    lease-expiration-duration-in-seconds: 2 # 디스커버리는 서비스 등록 해제 하기 전에 마지막 하트비트에서부터 2초 기다림
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    registry-fetch-interval-seconds: 3
+    disable-delta: true
+    serviceUrl:
+      defaultZone: http://100.51.0.3:8761/eureka/,http://100.51.1.170:8761/eureka/
+
+my:
+  kafka-server: 34.64.215.186:9092
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    com.uplus: DEBUG
+    com.netflix: ERROR # INFO # 
