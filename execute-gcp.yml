@@ -33,7 +33,7 @@ eureka:
     registry-fetch-interval-seconds: 3
     disable-delta: true
     serviceUrl:
-      defaultZone: http://100.51.0.3:8761/eureka/,http://100.51.1.170:8761/eureka/
+      defaultZone: http://100.51.0.3:8761/eureka/
 
 my:
   kafka-server: 34.64.215.186:9092
